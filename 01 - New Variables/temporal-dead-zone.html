@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
+  // See https://wesbos.com/temporal-dead-zone/
+  console.log(pizza); // undefined
+  // temporal dead zone - cannot access a let or const variable before it's defined
 
+  const pizza = 'Deep Dish 🍕🍕🍕' // returns an error as not defined
+
+  // var can still be accessed just not the value as it has not been assigned
+  // var pizza = 'Deep Dish 🍕🍕🍕';
+  // console.log(pizza); // returns Deep Dish 🍕🍕🍕
 </script>
 </body>
 </html>

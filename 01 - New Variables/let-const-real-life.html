@@ -6,6 +6,27 @@
 </head>
 <body>
 <script>
+  // not needed when using let and const
+  (function() { // IIFE
+    var name = 'orlando'; // not to cause issues with other variables
+  })
+
+  {
+    const name = 'orlando'; // scope to this block
+  }
+
+  // for (var i = 0; i < 10; i++) {
+  //   // console.log(i);
+  //   setTimeout(function() {
+  //     console.log('The number is ' + i); // will console log 10 ten times.
+  //   }, 1000);
+  // }
+
+  for (let i = 0; i <10; i++) {
+    setTimeout(function () {
+      console.log('The number is ' + i);
+    }, 1000);
+  }
 
 </script>
 </body>

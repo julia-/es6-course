@@ -6,6 +6,40 @@
 </head>
 <body>
 <script>
+  const key = 'abc123';
+  let points = 50;
+  let winner = false; // scoped to the window 
+
+// let
+// block scope
+// cannot re-declare it twice in the same scop
+// returns error if you try to declare unlike when using var
+// can update the value
+  let points = 60; // returns an error as already declared
+  points = 60;
+
+  if (points > 40) {
+    console.log('It ran');
+    let winner = true; // cannot be accessed outside of block
+  }
+
+// const variables
+// block scoped
+// cannot be updated
+// const object cannot be reassigned but the object's attributes/propeties can change
+
+  key = 'abc123' // return error as can't update
+
+  const person = {
+    name: 'Orlando',
+    age: 1
+  }
+
+  person = { name: 'Ollie' } // return error
+  person.age = 2; // will update age to 2
+
+  const ollie = Object.freeze(person);
+
 
 </script>
 </body>
